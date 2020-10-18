@@ -22,9 +22,11 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
-      - run: cd TestNGProjectWithFTPAndDocker
-      - run: npm install
-      - run: npm build
+      - name: Build items
+        run: |
+          cd TestNGProjectWithFTPAndDocker
+          npm install
+          npm build
       - name: List output files
         run: |
           cd TestNGProjectWithFTPAndDocker
