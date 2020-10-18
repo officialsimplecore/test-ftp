@@ -28,7 +28,7 @@ jobs:
       - name: List output files
         run: |
           cd TestNGProjectWithFTPAndDocker
-          find dist/ -print
+          find TestNGProjectWithFTPAndDocker/dist/ -print
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
