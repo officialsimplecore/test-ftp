@@ -27,8 +27,6 @@ jobs:
           cd TestNGProjectWithFTPAndDocker
           npm install
           npm run build
-      - name: List output files
-        run: |
           cd TestNGProjectWithFTPAndDocker
           find TestNGProjectWithFTPAndDocker/dist/ -print
       - name: FTP-Deploy-Action
