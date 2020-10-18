@@ -19,9 +19,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: FTP-Deploy-Action
-        uses: sebastianpopp/ftp-action@releases/v2
+      # Here is the deployment action
+      - name: Upload from public_html via FTP
+        uses: airvzxf/ftp-deployment-action@latest
         with:
-          host: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          delete: "false"
