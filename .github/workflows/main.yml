@@ -22,7 +22,7 @@ jobs:
       # Here is the deployment action
       - name: Create test files
         run: |
-          docker build -t test .
+          touch test.txt
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
