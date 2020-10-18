@@ -1,5 +1,11 @@
-FROM scratch
+FROM node
 
-RUN mkdir docker-image
+WORKDIR /client
 
-CMD ["touch", "docker-image/test.txt"]
+COPY package*.json /client
+
+RUN npm install
+
+COPY . /client
+
+RUN npm build
