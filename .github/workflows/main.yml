@@ -25,4 +25,3 @@ jobs:
           ftp-server: ftp://47.147.142.146/
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
