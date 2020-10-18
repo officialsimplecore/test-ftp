@@ -2,10 +2,10 @@ FROM node
 
 WORKDIR /client
 
-COPY package*.json /client
+COPY ./TestNGProjectWithFTPAndDocker/package*.json /client
 
 RUN npm install
 
-COPY . /client
+COPY ./TestNGProjectWithFTPAndDocker /client
 
 RUN npm build
