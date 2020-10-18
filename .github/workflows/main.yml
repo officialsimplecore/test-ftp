@@ -1,5 +1,4 @@
 # This is a basic workflow to help you get started with Actions
-
 name: FTP Testing
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -26,6 +25,8 @@ jobs:
       - run: cd TestNGProjectWithFTPAndDocker
       - run: npm install
       - run: npm build
+      - name: List output files
+        run: find dist/ -print
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
